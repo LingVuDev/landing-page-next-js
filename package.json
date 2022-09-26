@@ -4,9 +4,14 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "slicemachine": "start-slicemachine"
   },
   "dependencies": {
+    "@prismicio/client": "^6.7.1",
+    "@prismicio/helpers": "^2.3.5",
+    "@prismicio/react": "^2.5.0",
+    "@prismicio/slice-simulator-react": "^0.2.2",
     "date-fns": "^2.29.3",
     "gray-matter": "^4.0.3",
     "next": "latest",
@@ -16,6 +21,7 @@
     "remark-html": "^15.0.1"
   },
   "devDependencies": {
-    "sass": "^1.54.0"
+    "sass": "^1.54.0",
+    "slice-machine-ui": "^0.4.2"
   }
 }

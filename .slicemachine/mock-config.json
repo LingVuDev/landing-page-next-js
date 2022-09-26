@@ -1,0 +1,13 @@
+{
+  "_cts": {
+    "homepage": {
+      "sociallinks": {},
+      "title": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      }
+    }
+  }
+}

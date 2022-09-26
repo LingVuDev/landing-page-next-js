@@ -1,0 +1,43 @@
+{
+  "id": "mock-doc-id",
+  "url": null,
+  "type": "homepage",
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
+  "data": {
+    "profileimage": {
+      "link_type": "Web",
+      "url": "https://slicemachine.dev"
+    },
+    "title": [
+      {
+        "type": "heading1",
+        "text": "Perhaps",
+        "spans": []
+      }
+    ],
+    "subtitle": [
+      {
+        "type": "paragraph",
+        "text": "Dolor sunt elit culpa id deserunt dolor nostrud voluptate qui. Nulla duis amet aute proident magna culpa.",
+        "spans": []
+      }
+    ],
+    "sociallinks": [
+      {}
+    ],
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Anim dolor consequat enim enim. Sint amet ullamco id consectetur excepteur veniam nisi irure esse est aliqua consequat.",
+        "spans": []
+      }
+    ]
+  }
+}

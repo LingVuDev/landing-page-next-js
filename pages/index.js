@@ -4,19 +4,17 @@ import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
 import Date from "../components/date";
+import { PrismicText, PrismicRichText } from "@prismicio/react";
+import { createClient } from "../prismicio";
 
-export default function Home({ allPostsData }) {
+export default function Home({ allPostsData, page }) {
   return (
-    <Layout home>
+    <Layout home={page.data}>
       <Head>
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>
-          Hello, I'm Ling 👋. Passioned about web development. Mainly working on
-          the frontend professionaly with Angular and React, but in my free time
-          I broaden my knowledge on mobile and backend development as well.
-        </p>
+        <p>{page.data.description[0].text}</p>
         <p>
           Want to learn more about me?{" "}
           <a href="https://www.linkedin.com/in/lingvu/">LinkedIn</a>
@@ -43,10 +41,15 @@ export default function Home({ allPostsData }) {
 }
 
 export async function getStaticProps() {
+  const client = createClient();
+  const page = await client.getSingle("homepage");
+  // Todo replace this
   const allPostsData = getSortedPostsData();
+
   return {
     props: {
       allPostsData,
+      page,
     },
   };
 }
