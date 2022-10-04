@@ -4,7 +4,7 @@ import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 
-export const siteTitle = "Ling Vu's personal website";
+export const siteTitle = "Ling Vu";
 
 export default function Layout({ children, home }) {
   return (
@@ -24,7 +24,6 @@ export default function Layout({ children, home }) {
               className={utilStyles.borderCircle}
               height={144}
               width={144}
-              alt={name}
             />
             <h1 className={utilStyles.heading2Xl}>{home.title[0].text}</h1>
             <h2 className={utilStyles.headingLg}>{home.subtitle[0].text}</h2>
@@ -39,13 +38,12 @@ export default function Layout({ children, home }) {
                   className={utilStyles.borderCircle}
                   height={108}
                   width={108}
-                  alt={name}
                 />
               </a>
             </Link>
             <h2 className={utilStyles.headingLg}>
               <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
+                <a className={utilStyles.colorInherit}>{siteTitle}</a>
               </Link>
             </h2>
           </>
