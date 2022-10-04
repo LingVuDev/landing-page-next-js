@@ -1,0 +1,31 @@
+{
+  "id": "post",
+  "label": "Post",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "title",
+          "placeholder": ""
+        }
+      },
+      "creationDate": {
+        "type": "Timestamp",
+        "config": {
+          "label": "creationDate",
+          "placeholder": ""
+        }
+      },
+      "content": {
+        "type": "Text",
+        "config": {
+          "label": "content",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}

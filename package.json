@@ -5,7 +5,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "slicemachine": "start-slicemachine"
+    "slicemachine": "prismic login && start-slicemachine"
   },
   "dependencies": {
     "@prismicio/client": "^6.7.1",
@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "sass": "^1.54.0",
-    "slice-machine-ui": "^0.4.2"
+    "slice-machine-ui": "^0.4.2",
+    "prismic-cli": "^4.2.3"
   }
 }

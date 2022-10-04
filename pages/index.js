@@ -1,13 +1,12 @@
 import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
-import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
 import Date from "../components/date";
-import { PrismicText, PrismicRichText } from "@prismicio/react";
 import { createClient } from "../prismicio";
 
 export default function Home({ allPostsData, page }) {
+  console.log(allPostsData);
   return (
     <Layout home={page.data}>
       <Head>
@@ -23,14 +22,14 @@ export default function Home({ allPostsData, page }) {
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title }) => (
+          {allPostsData.map(({ id, data: { title, creationDate } }) => (
             <li className={utilStyles.listItem} key={id}>
               <Link href={`/posts/${id}`}>
                 <a>{title}</a>
               </Link>
               <br />
               <small className={utilStyles.lightText}>
-                <Date dateString={date} />
+                <Date dateString={creationDate} />
               </small>
             </li>
           ))}
@@ -43,8 +42,7 @@ export default function Home({ allPostsData, page }) {
 export async function getStaticProps() {
   const client = createClient();
   const page = await client.getSingle("homepage");
-  // Todo replace this
-  const allPostsData = getSortedPostsData();
+  const allPostsData = await client.getAllByType("post");
 
   return {
     props: {
